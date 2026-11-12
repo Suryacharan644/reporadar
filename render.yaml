@@ -1,0 +1,18 @@
+# Render Blueprint: deploys the RepoRadar API.
+# In Render: New > Blueprint > pick this repo. You will be asked for GITHUB_TOKEN.
+services:
+  - type: web
+    name: reporadar-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.1"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: GITHUB_TOKEN
+        sync: false
