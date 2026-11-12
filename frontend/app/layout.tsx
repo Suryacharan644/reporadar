@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Methodology
               </Link>
               <a
-                href="https://github.com/reporadar/reporadar"
+                href="https://github.com/Suryacharan644/reporadar"
                 target="_blank"
                 rel="noreferrer"
                 className="hidden rounded-lg px-3 py-1.5 transition hover:bg-white/5 hover:text-zinc-100 sm:block"

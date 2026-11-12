@@ -30,7 +30,7 @@ files, a shareable report, and a GitHub Action that comments on pull requests.
 You need **Node.js 20+** and **Python 3.11+** (3.13 recommended).
 
 ```bash
-git clone https://github.com/reporadar/reporadar.git
+git clone https://github.com/Suryacharan644/reporadar.git
 cd reporadar
 ```
 
@@ -82,7 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: reporadar/reporadar/action@main   # pin a release tag once published
+      - uses: Suryacharan644/reporadar/action@main   # pin a release tag once published
         with:
           min-score: "60"    # fail the job below this score; 0 never fails
 ```
